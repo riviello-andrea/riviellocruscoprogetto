@@ -16,6 +16,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def unitList():
-    mycursor.execute("SELECT * FROM Airbnb limit 17")
+    mycursor.execute("SELECT * FROM NYC.Airbnb, NYC.neighborhood WHERE neighbourhood_group2=neighbourhood_group LIMIT 15")
     myresult=mycursor.fetchall()
     return render_template('nycairbnb.html', units=myresult)

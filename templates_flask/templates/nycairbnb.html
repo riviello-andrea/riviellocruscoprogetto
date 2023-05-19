@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>NYC Airbnb</title>
     <link rel="stylesheet" href="../static/css/style.css" />
 </head>
+
 <body>
     <h1>NYC Airbnb</h1>
-    {% for item in units %}
-    <p>  Name: {{ item[1] }} </p>
-    <p> Neiborhood: {{ item[4] }} </p>
-    <section class="center-box">
-    <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="400">
-    </section>
-    <p> Price per Night: {{ item[9] }}$ </p>
-    <hr/ color="blue">
-{% endfor %}
+    <div class="container">
+        {% for item in units %}
+        <div class="bordo">
+            <p> Name: {{ item[1] }} </p>
+            <p> Neiborhood: {{ item[4] }} </p>
+            <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="400" height="250">
+            <p> Price per Night: {{ item[9] }}$ </p>
+            <p> Neiborhood: {{ item[16] }} </p>
+        </div>
+        {% endfor %}
+    </div>
 </body>
+
 </html>
