@@ -8,21 +8,22 @@
 
 <body>
     <div class="logo">
-        <a href="https://www.airbnb.it/" target="_blank">
+        <a href="https://rb.gy/4msua" target="_blank">
             <img  src="../static/airbnblogo.png" width="600">
         </a>  
     </div> 
     <div class="container">
         {% for item in units %}
         <div class="bordo">
-            <p> Name: {{ item[1] }} </p>
-            <p> Neiborhood: {{ item[4] }} </p>
+            <p class="title"> {{ item[1] }} </p>
             <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="400" height="250">
             <p> Price per Night: {{ item[9] }}$ </p>
-            <p> Neiborhood: {{ item[16] }} </p>
+            <p> Neiborhood: {{ item[4] }} </p>
+            <p> Borough: {{ item[16] }} </p>
         </div>
         {% endfor %}
     </div>
+<!-- Codice HTML per l'animazione delle onde: -->
     <div class="your-container">
                 <svg
                 class="css-waves"
@@ -44,8 +45,8 @@
                 <use href="#wave-pattern" x="48" y="5" fill="rgba(155,255,255,0.3)"></use>
                 <use href="#wave-pattern" x="48" y="7" fill="rgba(155,255,255,0.3)"></use>
                 </g>
-            </svg>
-        </div>
+                </svg>
+    </div>
 </body>
 
 </html>
