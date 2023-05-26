@@ -20,6 +20,9 @@
 .title {
   display: flex;
   justify-content: center;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:crimson;
+  font-size: large;
 }
 
 .logo {
